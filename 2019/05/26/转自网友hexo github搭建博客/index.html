@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="用GitHub+hexo创建个人博客"><meta name="keywords" content="hithub hexo 博客, YG BLOG"><link rel="alternate" href="/atom.xml" title="YG BLOG"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
+<link rel="canonical" href="http://blog.92yg.cn/2019/05/26/转自网友hexo github搭建博客/">
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
+
+<script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true,"latex":false};
+</script>
+
+    <title>用GitHub+hexo创建个人博客 - YG BLOG</title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">YG BLOG</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">首页
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">归档
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签
+          </li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">YG BLOG</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            首页
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            归档
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            标签
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/about/">
+            关于
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">用GitHub+hexo创建个人博客
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-05-26
+        </span></div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-常见有三种博客搭建方案”-一-常见有三种博客搭建方案"><span class="toc-text">一 常见有三种博客搭建方案”)一 常见有三种博客搭建方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-下面直接进入主题-👇-博客搭建"><span class="toc-text">二 下面直接进入主题 👇 博客搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#首先我们需要一个GitHub账号和一个项目库”-首先我们需要一个GITHUB账号和一个项目库"><span class="toc-text">首先我们需要一个GitHub账号和一个项目库”)首先我们需要一个GITHUB账号和一个项目库</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#三-环境配置"><span class="toc-text">三 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#先怼node-js"><span class="toc-text">先怼node.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再怼git"><span class="toc-text">再怼git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#然后就可以安装Hexo了"><span class="toc-text">然后就可以安装Hexo了</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MAC"><span class="toc-text">MAC:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WINDOWS"><span class="toc-text">WINDOWS:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将你的git与GitHub绑定"><span class="toc-text">将你的git与GitHub绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”-由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址"><span class="toc-text">由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”)由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成ssh密钥”-生成SSH密钥"><span class="toc-text">生成ssh密钥”)生成SSH密钥</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署"><span class="toc-text">部署</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MAC-1"><span class="toc-text">MAC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#接下来就是部署了”-接下来就是部署了"><span class="toc-text">接下来就是部署了”)接下来就是部署了</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布文章"><span class="toc-text">发布文章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#发布部署"><span class="toc-text">发布部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写下更换主题吧"><span class="toc-text">写下更换主题吧</span></a></li>
+    </div>
+  </div><div class="post-content"><p><strong>一步一步绝对能成 mac+windows</strong>  </p>
+<h2 id="一-常见有三种博客搭建方案”-一-常见有三种博客搭建方案"><a href="#一-常见有三种博客搭建方案”-一-常见有三种博客搭建方案" class="headerlink" title="一 常见有三种博客搭建方案”)一 常见有三种博客搭建方案"></a>一 常见有三种博客搭建方案”)一 常见有三种博客搭建方案</h2><ul>
+<li><a href="https://zh-cn.wordpress.com/" target="_blank" rel="noopener">wordpress</a></li>
+</ul>
+<blockquote>
+<p>一般需要独立域名(充钱)有广告，做许多东西需要升级至高级版(还是充钱)，手机版访问麻烦(所以我直接扔了那个博客)</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>+<a href="https://jekyllrb.com/" target="_blank" rel="noopener">jekyll</a></li>
+</ul>
+<blockquote>
+<p>稍微麻烦一点 (其实是作者技术太挫)</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>+<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/48438858/54468954-e73dd380-47cc-11e9-8089-a1f910273b15.png" alt="C位当然要有配图"></p>
+<blockquote>
+<p>免费 简单 据说用的人还多 所以我选择这个<br>`<br><a id="more"></a></p>
+</blockquote>
+<h2 id="二-下面直接进入主题-👇-博客搭建"><a href="#二-下面直接进入主题-👇-博客搭建" class="headerlink" title="二 下面直接进入主题 👇 博客搭建"></a>二 下面直接进入主题 👇 博客搭建</h2><h4 id="首先我们需要一个GitHub账号和一个项目库”-首先我们需要一个GITHUB账号和一个项目库"><a href="#首先我们需要一个GitHub账号和一个项目库”-首先我们需要一个GITHUB账号和一个项目库" class="headerlink" title="首先我们需要一个GitHub账号和一个项目库”)首先我们需要一个GITHUB账号和一个项目库"></a>首先我们需要一个GitHub账号和一个项目库”)首先我们需要一个<a href="https://github.com/" target="_blank" rel="noopener">GITHUB</a>账号和一个项目库</h4><p>怎么创建账号就不用我说了，但是创建库的时候需要提到一个细节</p>
+<p>1 先点击这里创建</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54468995-6cc18380-47cd-11e9-8290-c0727beb3fa5.png" alt="点击创建项目"></p>
+<p>2 创建项目的是时候Repositoryname需要同Owner一样然后补齐github.io</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469009-adb99800-47cd-11e9-8a87-7e05fd3b80e6.png" alt="设置仓库名"></p>
+<p>3 然后点击 Create repository创建就好</p>
+<h2 id="三-环境配置"><a href="#三-环境配置" class="headerlink" title="三 环境配置"></a>三 环境配置</h2><p><a href="https://hexo.io/docs/" target="_blank" rel="noopener">Hexo</a>有着详细的安装使用介绍 下面是我的</p>
+<h3 id="先怼node-js"><a href="#先怼node-js" class="headerlink" title="先怼node.js"></a>先怼node.js</h3><p>mac: 去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>官网，我下载了左边的那个 然后一路安装即可</p>
+<p>windows:<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>下载windows就可以<br>下载安装包，安装Node.js会包含环境变量及npm的安装，安装之后可以在命令行中输入node -v看看是否安装成功。</p>
+<p>如果 git bash 里报错了，就去环境变量里看看有没有 nodejs，没有的话需要把nodejs地址添加一下如果已经有了，重启电脑。</p>
+<h3 id="再怼git"><a href="#再怼git" class="headerlink" title="再怼git"></a>再怼git</h3><p>mac:<a href="https://www.git-scm.com/download/mac" target="_blank" rel="noopener">点击这里进入页面自动下载了</a></p>
+<p>windows:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">点击这里进入页面直接下载了</a>记得git -v 查看是否安装成功失败了请参看其他详细git安装教程(我反正没失败过)</p>
+<h3 id="然后就可以安装Hexo了"><a href="#然后就可以安装Hexo了" class="headerlink" title="然后就可以安装Hexo了"></a>然后就可以安装Hexo了</h3><h4 id="MAC"><a href="#MAC" class="headerlink" title="MAC:"></a>MAC:</h4><p>Node.js和Git都安装好后就可以安装Hexo了。</p>
+<p>终端执行怼下命令： sudo npm install -g hexo</p>
+<p><em>如果需要输入密码就是Mac登录密码</em></p>
+<p>这里就是一个大坑：Hexo官网上的安装命令是 npm install -g hexo-cli，多数教程也都是没有sudo然鹅直接怼就去就会报错权限，加sudo解决问题。</p>
+<h4 id="WINDOWS"><a href="#WINDOWS" class="headerlink" title="WINDOWS:"></a>WINDOWS:</h4><p>npm install -g hexo-cli</p>
+<h3 id="将你的git与GitHub绑定"><a href="#将你的git与GitHub绑定" class="headerlink" title="将你的git与GitHub绑定"></a>将你的git与GitHub绑定</h3><h4 id="由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”-由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址"><a href="#由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”-由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址" class="headerlink" title="由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”)由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址"></a>由于Git是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和Email地址”)由于GIT是分布式版本控制系统，所以，每个机器都必须自报家门：你的名字和EMAIL地址</h4><p>git config –global user.name “你的GitHub用户名”</p>
+<p>git config –global user.email “你的GitHub注册邮箱”</p>
+<h4 id="生成ssh密钥”-生成SSH密钥"><a href="#生成ssh密钥”-生成SSH密钥" class="headerlink" title="生成ssh密钥”)生成SSH密钥"></a>生成ssh密钥”)生成SSH密钥</h4><p>生成密钥 输入： ssh-keygen -t rsa -C “你的GitHub注册邮箱”<br>然后回车遇到y or n? 就y 继续回车</p>
+<p>mac: 先输入 cd ~</p>
+<p>然后就可以cd~/.ssh 里面会有id_rsa和rsa_rsa.pub两个文件</p>
+<p>vim rsa_rsa.pub复制里面的内容 没有vim的话vi应该有用vi rsa_rsa.pub</p>
+<p>windows:</p>
+<p>输入ls -a 查看所有文件 在输入cat.ssh\id_rsa.pub打开文件</p>
+<p>复制里面全部内容</p>
+<p>然后打开git设置(点击头像 seeings)</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54468999-7cd96300-47cd-11e9-912c-6876d0a52614.png" alt="配置新的ssh"></p>
+<p>然后粘贴你的密钥 Add SSH key保存</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469020-c924a300-47cd-11e9-9bf0-aa23bca3afa0.png" alt="加入密钥保存"></p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h4 id="MAC-1"><a href="#MAC-1" class="headerlink" title="MAC"></a>MAC</h4><p>我们先找个地方创建一个文件夹这里会存放你的blog(博客)全部内容</p>
+<p>打开终端进入这个文件夹目录 blog是你的文件夹名称</p>
+<p>输入hexo init blog</p>
+<p>然后cd到blog文件夹下安装npm</p>
+<p>输入 npm install</p>
+<p>执行下面的命令开启hexo服务器</p>
+<p>输入 hexo s</p>
+<p>这个时候你可以看见一个这样的博客页面了打开浏览器</p>
+<p>输入 localhost:4000</p>
+<h4 id="接下来就是部署了”-接下来就是部署了"><a href="#接下来就是部署了”-接下来就是部署了" class="headerlink" title="接下来就是部署了”)接下来就是部署了"></a>接下来就是部署了”)接下来就是部署了</h4><p>首先介绍一下两个配置文件他们都叫_config.yml</p>
+<p>不同的是blog里面的_config.yml是站点配置文件</p>
+<p>而我们themes文件夹每个主题文件里也有一个_config.yml他是配置主题的文件</p>
+<p>我们打开blog里面的_config.yml 输入vim _config.yml</p>
+<p>翻到最下面改成这样没有就加上</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469024-d477ce80-47cd-11e9-91af-e0396018de5f.png" alt="这样"></p>
+<p>你的地址在这里</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469027-e22d5400-47cd-11e9-8287-602cc4544dc8.png" alt="在这里"></p>
+<p>这里需要注意坑二 每一个配置的 ： 后面要有一个空格！！！！<br>然后保存站点配置</p>
+<p>在blog文件夹目录里面执行一下生成静态页面命令</p>
+<p>输入 hexo g (或是hexo generate)</p>
+<p>如果有报一下错误</p>
+<p>注：save前面的‘-’是两个被浏览器自动处理成一个了请手动添加上去(不然会报错)  </p>
+<table style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0px; width: auto; border: none; margin: 0px;"><tbody style="box-sizing: border-box;"><tr style="box-sizing: border-box; height: 35px;"><td class="gutter" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px 20px 0px 0px; color: rgb(102, 102, 102); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px; text-align: right;"><span class="line" style="box-sizing: border-box; color: rgb(102, 102, 102); min-height: 19px; text-shadow: none;">1</span><br style="box-sizing: border-box;"></pre></td><td class="code" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px; color: rgb(101, 123, 131); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px;"><span class="line" style="box-sizing: border-box; color: rgb(255, 255, 255); min-height: 19px;">ERROR Local hexo not found in ~/blog</span><br style="box-sizing: border-box;"></pre></td></tr></tbody></table>
+
+<table style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0px; width: auto; border: none; margin: 0px;"><tbody style="box-sizing: border-box;"><tr style="box-sizing: border-box; height: 35px;"><td class="gutter" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px 20px 0px 0px; color: rgb(102, 102, 102); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px; text-align: right;"><span class="line" style="box-sizing: border-box; color: rgb(102, 102, 102); min-height: 19px; text-shadow: none;">1</span><br style="box-sizing: border-box;"></pre></td><td class="code" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px; color: rgb(101, 123, 131); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px;"><span class="line" style="box-sizing: border-box; color: rgb(255, 255, 255); min-height: 19px;">ERROR Try runing: ‘npm install hexo –save’</span><br style="box-sizing: border-box;"></pre></td></tr></tbody></table>
+
+<p>就执行 输入  </p>
+<table style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0px; width: auto; border: none; margin: 0px;"><tbody style="box-sizing: border-box;"><tr style="box-sizing: border-box; height: 35px;"><td class="gutter" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px 20px 0px 0px; color: rgb(102, 102, 102); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px; text-align: right;"><span class="line" style="box-sizing: border-box; color: rgb(102, 102, 102); min-height: 19px; text-shadow: none;">1</span><br style="box-sizing: border-box;"></pre></td><td class="code" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px; color: rgb(101, 123, 131); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px;"><span class="line" style="box-sizing: border-box; color: rgb(255, 255, 255); min-height: 19px;">npm install hexo –save</span><br style="box-sizing: border-box;"></pre></td></tr></tbody></table>
+
+<p>没有报错请不要执行或者忽略</p>
+<p>执行配置命令  </p>
+<table style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0px; width: auto; border: none; margin: 0px;"><tbody style="box-sizing: border-box;"><tr style="box-sizing: border-box; height: 35px;"><td class="gutter" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px 20px 0px 0px; color: rgb(102, 102, 102); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px; text-align: right;"><span class="line" style="box-sizing: border-box; color: rgb(102, 102, 102); min-height: 19px; text-shadow: none;">1</span><br style="box-sizing: border-box;"></pre></td><td class="code" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px; color: rgb(101, 123, 131); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px;"><span class="line" style="box-sizing: border-box; color: rgb(255, 255, 255); min-height: 19px;">hexo d  (或是 hexo deploy)</span><br style="box-sizing: border-box;"></pre></td></tr></tbody></table>
+
+<p>这里特别注意 我就是载在这里！ 若执行命令hexo deploy仍然报错：无法连接git或找不到git，则执行如下命令来安装一个叫hexo-deployer-git东西</p>
+<table style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0px; width: auto; border: none; margin: 0px;"><tbody style="box-sizing: border-box;"><tr style="box-sizing: border-box; height: 35px;"><td class="gutter" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px 20px 0px 0px; color: rgb(102, 102, 102); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px; text-align: right;"><span class="line" style="box-sizing: border-box; color: rgb(102, 102, 102); min-height: 19px; text-shadow: none;">1</span><br style="box-sizing: border-box;"></pre></td><td class="code" style="box-sizing: border-box; padding: 0px; height: 35px; border: none;"><pre style="box-sizing: border-box; overflow: auto; white-space: pre-wrap; overflow-wrap: break-word; font-family: Menlo, Monaco, &quot;Andale Mono&quot;, &quot;lucida console&quot;, &quot;Courier New&quot;, monospace; font-size: 0.9em; background: rgb(39, 40, 34); margin: 0px; padding: 0px; color: rgb(101, 123, 131); line-height: 1.5; border: none; text-shadow: rgb(68, 68, 68) 0px 1px;"><span class="line" style="box-sizing: border-box; color: rgb(255, 255, 255); min-height: 19px;">输入 npm install hexo-deployer-git –save</span><br style="box-sizing: border-box;"></pre></td></tr></tbody></table>
+
+<p>执行 hexo g<br>执行 hexo d</p>
+<p>倘若提示输入密码输入即可没有执行忽略</p>
+<p>这时候就可以访问你的博客了 https://写你的.github.io/</p>
+<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>终端cd到blog文件夹目录</p>
+<p>输入hexo new “文件名” 新建文章</p>
+<h4 id="发布部署"><a href="#发布部署" class="headerlink" title="发布部署"></a>发布部署</h4><p>然后 hexo g (生成静态页面)<br>在然后 hexo d (部署到github)</p>
+<p>如果出现了花里胡哨的错误可以在生成之前</p>
+<p>输入 hexo clean</p>
+<p>ps: 每次更新都会等那么一会</p>
+<h2 id="写下更换主题吧"><a href="#写下更换主题吧" class="headerlink" title="写下更换主题吧"></a>写下更换主题吧</h2><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a>里找到一款主题我的是yilia</p>
+<p>下载这个主题</p>
+<p>输入 git clone<a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a>themes/yilia</p>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469036-f1ac9d00-47cd-11e9-8484-ecb7ef4a6f84.png" alt="这里会多一个"></p>
+<blockquote>
+<p>打开站点的_config.yml配置文件，将里面的 theme: landscape 改为 theme: yilia.</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/48438858/54469042-fbce9b80-47cd-11e9-95d9-cc2677a64899.png" alt="改成你主题的名字"></p>
+<p>然后还是 hexo g 和 hexo d</p>
+<p>最后访问下你的博客吧这里在看看扔出我的</p>
+<p><a href="https://zpangjie.github.io/" target="_blank" rel="noopener">张胖杰的博客</a></p>
+<p>ps: 每次更新都会等那么一会!!!!!!!!</p>
+
+      </div>
+      
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/hithub-hexo-博客/">hithub hexo 博客</a>
+            </div>
+        
+        <nav class="post-nav"><a class="next" href="/2019/05/25/hexo博客发布及编辑文章/">
+        <span class="next-text nav-default">github hexo博客文章发布及编辑</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="lv-container" data-id="city" data-uid="MTAyMC80NDQxNy8yMDk0OQ==">
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+      </div>  
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:yg@92yg.cn" class="iconfont icon-email" title="email"></a>
+        <a href="http://blog.92yg.cn" class="iconfont icon-Home" title="Home"></a>
+        </div><div class="copyright">
+ 
+  <span class="copyright-year">&copy;2015 - 2019<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">YG BLOG</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script type="text/javascript">
+	(function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
+</body>
+</html>
