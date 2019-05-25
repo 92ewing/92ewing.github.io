@@ -1,110 +1,143 @@
 <!DOCTYPE html>
 <html lang>
-  <head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 
 
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
 
-<meta name="theme-color" content="#f8f5ec">
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="Win10局域网出现错误（0x80070035）解决方法"><meta name="keywords" content="共享打印机, YG BLOG"><link rel="alternate" href="/default" title="YG BLOG"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0">
+
+  <meta name="description" content="Win10局域网出现错误（0x80070035）解决方法">
+
+
+
+
+  <meta name="keywords" content="共享打印机,">
+
+
+
+
+  <link rel="alternate" href="/default" title="YG BLOG">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
 <link rel="canonical" href="http://blog.92yg.cn/2019/05/25/win10共享打印机80070035/">
 
-<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css"><link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
-<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0">
 
-<script id="baidu_push">
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-<script>
-  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true,"latex":false};
+<meta name="description" content="今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示： 请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。” 百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方">
+<meta name="keywords" content="共享打印机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Win10局域网出现错误（0x80070035）解决方法">
+<meta property="og:url" content="http://blog.92yg.cn/2019/05/25/win10共享打印机80070035/index.html">
+<meta property="og:site_name" content="YG BLOG">
+<meta property="og:description" content="今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示： 请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。” 百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424744293.png">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424820148.png">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424842299.png">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424861034.png">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424879071.png">
+<meta property="og:image" content="https://yangyang.im/post-images/1558424904894.png">
+<meta property="og:updated_time" content="2019-05-25T08:59:08.325Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Win10局域网出现错误（0x80070035）解决方法">
+<meta name="twitter:description" content="今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示： 请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。” 百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方">
+<meta name="twitter:image" content="https://yangyang.im/post-images/1558424744293.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
 </script>
 
-    <title>Win10局域网出现错误（0x80070035）解决方法 - YG BLOG</title>
+
+
+
+  
+
+
+
+    <title> Win10局域网出现错误（0x80070035）解决方法 - YG BLOG </title>
   </head>
 
-  <body><div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/." class="logo">YG BLOG</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">YG BLOG</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
 </div>
 
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list"><a href="/">
-        <li class="mobile-menu-item">首页
-          </li>
-      </a><a href="/archives/">
-        <li class="mobile-menu-item">归档
-          </li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于
-          </li>
-      </a></ul>
-</nav>
-<div class="container" id="mobile-panel">
-      <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">YG BLOG</a>
-</div>
-
-<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
-          <a class="menu-item-link" href="/">
-            首页
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/archives/">
-            归档
-            </a>
-        </li>
-      <li class="menu-item">
-          <a class="menu-item-link" href="/about/">
-            关于
-            </a>
-        </li>
-      </ul></nav>
-</header>
-
-      <main id="main" class="main">
-        <div class="content-wrapper">
-          <div id="content" class="content"><article class="post">
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
     <header class="post-header">
-      <h1 class="post-title">Win10局域网出现错误（0x80070035）解决方法
-        </h1>
+      <h1 class="post-title">
+        
+          Win10局域网出现错误（0x80070035）解决方法
+        
+      </h1>
 
-      <div class="post-meta">
-        <span class="post-time">
-          2019-05-25
-        </span></div>
+      <time class="post-time">
+          May 25 2019
+      </time>
     </header>
 
-    <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li></ol>
-    </div>
-  </div><div class="post-content"><p>今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示：<br><a id="more"></a><br><strong>请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。”</strong><br><img src="https://yangyang.im/post-images/1558424744293.png" alt></p>
+
+
+    
+            <div class="post-content">
+            <p>今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示：</p>
+<p><strong>请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。”</strong><br><img src="https://yangyang.im/post-images/1558424744293.png" alt></p>
 <p>百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方法都是说：启动家庭组疑难解答——亲测无效。 通过搜索微软官方社区，终于找到了解决办法，现在把这方法分享给大家。</p>
 <h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.在Cortana中搜索“编辑组策略”或“Group Policy”，进入。<br><img src="https://yangyang.im/post-images/1558424820148.png" alt></p>
 <p>2.依次单击：管理模板-网络-Lanman工作站，可以发现右侧有4个策略。<br><img src="https://yangyang.im/post-images/1558424842299.png" alt></p>
@@ -112,42 +145,79 @@
 <p>4.将左上方的“未配置”（或“已禁用”）改为“已启用”，单击“确定”。<br><img src="https://yangyang.im/post-images/1558424879071.png" alt></p>
 <p>##完成 现在可以连接局域网打印机了，<br><img src="https://yangyang.im/post-images/1558424904894.png" alt></p>
 
-      </div>
-      
-      <footer class="post-footer">
-        <div class="post-tags">
-            <a href="/tags/共享打印机/">共享打印机</a>
             </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/共享打印机/">共享打印机</a>
+		  
+		</div>
+		
+
         
-        <nav class="post-nav"><a class="next" href="/2019/05/24/在线编辑/">
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2019/05/24/在线编辑/">
         <span class="next-text nav-default">在线编辑器</span>
-        <span class="prev-text nav-mobile">下一篇</span>
+        <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
-    </nav></footer>
-    </article></div><div class="comments" id="comments"></div></div>
-      </main>
+    
+  </nav>
 
-      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:92ewing@gmail.com" class="iconfont icon-email" title="email"></a>
-        <a href="https://github.com/92ewing" class="iconfont icon-github" title="github"></a>
-        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
-    </div><div class="copyright">
-  <span class="copyright-year">&copy;2016 - 2019<span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">YG BLOG</span>
-  </span>
-</div>
-</footer>
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">YG BLOG.</span>
+
+</span>
+
+      </footer>
 
       <div class="back-to-top" id="back-to-top">
         <i class="iconfont icon-up"></i>
       </div>
-    </div><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
-  <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
-  <script type="text/javascript" src="/js/src/even.js?v=2.11.0"></script>
-</body>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
 </html>
