@@ -112,13 +112,13 @@
     <div class="post-toc-content">
       <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li></ol>
     </div>
-  </div><div class="post-content"><p>今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示：<br><a id="more"></a><br><strong>请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。”</strong><br><img src="https://yangyang.im/post-images/1558424744293.png" alt></p>
+  </div><div class="post-content"><p>今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示：<br><a id="more"></a><br><strong>请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。”</strong><br><img src="/img/1558424744293.png" alt></p>
 <p>百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方法都是说：启动家庭组疑难解答——亲测无效。 通过搜索微软官方社区，终于找到了解决办法，现在把这方法分享给大家。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.在Cortana中搜索“编辑组策略”或“Group Policy”，进入。<br><img src="https://yangyang.im/post-images/1558424820148.png" alt></p>
-<p>2.依次单击：管理模板-网络-Lanman工作站，可以发现右侧有4个策略。<br><img src="https://yangyang.im/post-images/1558424842299.png" alt></p>
-<p>3.选中“启用不安全的来宾登录”，右键单击-编辑，<br><img src="https://yangyang.im/post-images/1558424861034.png" alt></p>
-<p>4.将左上方的“未配置”（或“已禁用”）改为“已启用”，单击“确定”。<br><img src="https://yangyang.im/post-images/1558424879071.png" alt></p>
-<p>##完成 现在可以连接局域网打印机了，<br><img src="https://yangyang.im/post-images/1558424904894.png" alt></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.在Cortana中搜索“编辑组策略”或“Group Policy”，进入。<br><img src="/img/1558424820148.png" alt></p>
+<p>2.依次单击：管理模板-网络-Lanman工作站，可以发现右侧有4个策略。<br><img src="/img/1558424842299.png" alt></p>
+<p>3.选中“启用不安全的来宾登录”，右键单击-编辑，<br><img src="/img/1558424861034.png" alt></p>
+<p>4.将左上方的“未配置”（或“已禁用”）改为“已启用”，单击“确定”。<br><img src="/img/1558424879071.png" alt></p>
+<p>##完成 现在可以连接局域网打印机了，<br><img src="/img/1558424904894.png" alt></p>
 
       </div>
       
