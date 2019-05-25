@@ -72,94 +72,55 @@
 
       <main id="main" class="main">
         <div class="content-wrapper">
-          <div id="content" class="content"><section id="posts" class="posts"><article class="post">
-    <header class="post-header">
-      <h1 class="post-title"><a class="post-link" href="/2019/05/25/win10共享打印机80070035/">Win10打开局域网出现 找不到网络路径 错误（0x80070035）解决方法</a>
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2019-05-25
-        </span></div>
-    </header>
-
-    <div class="post-content"><p>今天把笔记本电脑重置系统，发现无法访问局域网内的共享打印机，在【网络】中能看到对方计算机，但是双击后报错，显示：</p>
-<p><strong>请检查名称的拼写。否则，网络可能有问题。要尝试识别并解决网络问题，请单击“诊断”。进一步点击查看详细信息后，显示：“错误代码：0x80070035 找不到网络路径。”</strong><br><img src="https://yangyang.im/post-images/1558424744293.png" alt></p>
-<p>百度搜过很多教程，说出现该错误代码提示是由于1709版本中的系统默认设置存在高安全防护性能所引起的。原因没错，但解决方法都是说：启动家庭组疑难解答——亲测无效。 通过搜索微软官方社区，终于找到了解决办法，现在把这方法分享给大家。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>1.在Cortana中搜索“编辑组策略”或“Group Policy”，进入。<br><img src="https://yangyang.im/post-images/1558424820148.png" alt></p>
-<p>2.依次单击：管理模板-网络-Lanman工作站，可以发现右侧有4个策略。<br><img src="https://yangyang.im/post-images/1558424842299.png" alt></p>
-<p>3.选中“启用不安全的来宾登录”，右键单击-编辑，<br><img src="https://yangyang.im/post-images/1558424861034.png" alt></p>
-<p>4.将左上方的“未配置”（或“已禁用”）改为“已启用”，单击“确定”。<br><img src="https://yangyang.im/post-images/1558424879071.png" alt></p>
-<p>##完成 现在可以连接局域网打印机了，<br><img src="https://yangyang.im/post-images/1558424904894.png" alt></p>
-
-        </div></article>
-      <article class="post">
-    <header class="post-header">
-      <h1 class="post-title"><a class="post-link" href="/2019/05/24/在线编辑/">功能包括但不限于：</a>
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2019-05-24
-        </span></div>
-    </header>
-
-    <div class="post-content"><ol>
-<li>在同一个输入框实时写作和预览 Markdown<ul>
-<li><strong>粗体</strong>,<em>斜体</em>, <del>删除线</del>,<code>Code</code></li>
-<li><a href="https://laobubu.net/" target="_blank" rel="noopener">链接</a>, 图像, 脚注</li>
-<li>代码块、引用块、标题</li>
-<li>列表（有序，无序，嵌套， TO-DO 勾选框）</li>
-<li>MathJax 公式，包括 行内公式 和 公式块（使用<code>$</code>或<code>$$</code>包围）</li>
-</ul>
-</li>
-<li><strong>Alt+Click</strong>以跟踪链接和脚注</li>
-<li><strong>语法高亮</strong>支持超过 120 种语言的代码块</li>
-<li><strong>鼠标悬停</strong>以阅读脚注信息</li>
-<li><strong>可复用大量的 CodeMirror 代码、扩展程序</strong>以及一些主题。</li>
-</ol>
-<h2 id="在-V2EX-发布主题界面的演示"><a href="#在-V2EX-发布主题界面的演示" class="headerlink" title="在 V2EX 发布主题界面的演示"></a>在 V2EX 发布主题界面的演示</h2>
-        </div></article>
-      <article class="post">
-    <header class="post-header">
-      <h1 class="post-title"><a class="post-link" href="/2019/05/24/你好！/">你好！</a>
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2019-05-24
-        </span></div>
-    </header>
-
-    <div class="post-content">
-        </div></article>
-      <article class="post">
-    <header class="post-header">
-      <h1 class="post-title"><a class="post-link" href="/2019/05/24/hello-world/">Hello World</a>
-        </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2019-05-24
-        </span></div>
-    </header>
-
-    <div class="post-content"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        </div></article>
-      <nav class="pagination"></nav></section></div></div>
+          <div id="content" class="content"><section id="posts" class="posts"><section id="archive" class="archive"><div class="collection-title">
+            <h2 class="archive-year">2019</h2>
+          </div>
+        <div class="archive-post">
+        <span class="archive-post-time">
+          05-25
+          </span>
+        <span class="archive-post-title">
+          <a href="/2019/05/25/win10共享打印机80070035/" class="archive-post-link">
+            Win10打开局域网出现 找不到网络路径 错误（0x80070035）解决方法
+          </a>
+        </span>
+      </div>
+    <div class="archive-post">
+        <span class="archive-post-time">
+          05-24
+          </span>
+        <span class="archive-post-title">
+          <a href="/2019/05/24/在线编辑/" class="archive-post-link">
+            功能包括但不限于：
+          </a>
+        </span>
+      </div>
+    <div class="archive-post">
+        <span class="archive-post-time">
+          05-24
+          </span>
+        <span class="archive-post-title">
+          <a href="/2019/05/24/你好！/" class="archive-post-link">
+            你好！
+          </a>
+        </span>
+      </div>
+    <div class="archive-post">
+        <span class="archive-post-time">
+          05-24
+          </span>
+        <span class="archive-post-title">
+          <a href="/2019/05/24/hello-world/" class="archive-post-link">
+            Hello World
+          </a>
+        </span>
+      </div>
+    </section><nav class="pagination"></nav>
+    </section></div></div>
       </main>
 
-      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-        <a href="https://github.com/ahonn" class="iconfont icon-github" title="github"></a>
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:92ewing@gmail.com" class="iconfont icon-email" title="email"></a>
+        <a href="https://github.com/92ewing" class="iconfont icon-github" title="github"></a>
         <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
     </div><div class="copyright">
   <span class="power-by">
